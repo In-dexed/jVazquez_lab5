@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
-    <meta charset="UTF-8" />
+
+    <meta charset="UTF-8">
     <title>Exploring HTML forms</title>
 </head>
 <body>
@@ -51,8 +52,8 @@
         <div>
         <!-- Tel type is used for phone#.  We will not require this value -->  
             <label for="phone">Enter a phone number:</label><br><br>
-            <input type="tel" id="phone" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required><br><br>
-            <small>Format: 123-45-678</small><br><br>
+            <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required><br><br>
+            <small>Format: 123-456-7890</small><br><br>
         </div>
         <br>
 
@@ -60,17 +61,36 @@
         <!-- Provide the same group name to force selection of only one -->
         <!-- Dropdown menu use a select instead of an input type-->
         <!-- Dropdown menu use a select instead of a input type--> 
-
+            <label for="cars">Choose a car:</label>
+            <select id="cars" name="cars">
+                <option value="Nissan">Nissan</option>
+                <option value="Mazda">Mazda</option>
+                <option value="Scion">Scion</option>
+                <option value="Cadilac" selected>Cadilac</option>
+                <option value="Suburu">Suburu</option>
+                <option value="Toyota">Toyota</option>
+            </select>
         </div>
         <br>
-
+        <div>
+        <!--Multi-line text area--> 
+        <textarea id="w3review" name="w3review" rows="4" cols="50">
+        At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.
+        </textarea>   
+        </div>
         <div>
         <!-- Checkbox --> 
         <!-- Checkbox type can be used for a subscribe box --> 
-
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1"> I have a bike</label><br>
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+            <label for="vehicle2"> I have a car</label><br>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+            <label for="vehicle3"> I have a boat</label>
         </div>
         <br>
-        
+
+
         <div>
             <!-- This will reset our input box -->
             
@@ -84,7 +104,7 @@
         </div>
 
         <!-- This is for the hidden field that the user does not see -->
-               
+        <input type="hidden" name="hidden_filed" value="John Vazquez">
     </form>
 </body>
 </html>
